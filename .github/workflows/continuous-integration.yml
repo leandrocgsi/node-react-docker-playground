@@ -36,13 +36,13 @@ jobs:
      - name: Push to Docker Hub Container Registry
        run: |
          docker tag node-react-backend:latest ${{secrets.DOCKER_USERNAME}}/node-react-backend:latest
-         docker tag node-react-frontend:latest ${{secrets.DOCKER_USERNAME}}/node-react-frontend:latest
-         
          docker tag node-react-backend:latest ${{secrets.DOCKER_USERNAME}}/node-react-backend:${{github.run_id}}
+
+         docker push ${{secrets.DOCKER_USERNAME}}/node-react-backend:latest
+         docker push ${{secrets.DOCKER_USERNAME}}/node-react-backend:${{github.run_id}}
+         
+         docker tag node-react-frontend:latest ${{secrets.DOCKER_USERNAME}}/node-react-frontend:latest
          docker tag node-react-frontend:latest ${{secrets.DOCKER_USERNAME}}/node-react-frontend:${{github.run_id}}
          
-         docker push ${{secrets.DOCKER_USERNAME}}/node-react-backend:latest
          docker push ${{secrets.DOCKER_USERNAME}}/node-react-frontend:latest
-         
-         docker push ${{secrets.DOCKER_USERNAME}}/node-react-backend:${{github.run_id}}
          docker push ${{secrets.DOCKER_USERNAME}}/node-react-frontend:${{github.run_id}}
