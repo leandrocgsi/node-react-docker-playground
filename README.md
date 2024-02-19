@@ -3,7 +3,6 @@
 
 
 [![Continuous Integration with GitHub, GitHub Actions and Docker Hub](https://github.com/leandrocgsi/node-react-docker-playground/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/leandrocgsi/node-react-docker-playground/actions/workflows/continuous-integration.yml)
-
 ![Forks](https://img.shields.io/github/forks/leandrocgsi/node-react-docker-playground)
 ![Stars](https://img.shields.io/github/stars/leandrocgsi/node-react-docker-playground)
 ![Last Commit](https://img.shields.io/github/last-commit/leandrocgsi/node-react-docker-playground)
